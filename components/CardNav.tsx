@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 import Link from "next/link";
+import { Search, ShoppingCartIcon } from "lucide-react";
+import { SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 
 type CardNavLink = {
   label: string;
@@ -162,9 +164,12 @@ const CardNav: React.FC<CardNavProps> = ({
     if (el) cardsRef.current[i] = el;
   };
 
+  const { user } = useUser();
+  console.log(user);
+
   return (
     <div
-      className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
+      className={`card-nav-container mt-2 md:mt-0 absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
     >
       <nav
         ref={navRef}
@@ -197,16 +202,31 @@ const CardNav: React.FC<CardNavProps> = ({
           </div>
 
           <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <Image src={logo} alt={logoAlt} width={112} height={28} />
+            <Link href={"/"}>
+              <Image src={logo} alt={logoAlt} width={112} height={28} />
+            </Link>
           </div>
 
-          <button
-            type="button"
-            className="card-nav-cta-button hidden md:inline-flex border-0 rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300"
-            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}
-          >
-            Get Started
-          </button>
+          {/* other buttons and stuff */}
+          <div className="flex gap-2 items-center justify-center">
+            <button>
+              <Search />
+            </button>
+            <button className="relative">
+              <ShoppingCartIcon />
+              <span
+                className="absolute p-1 top-0.5 right-0
+               rounded-full bg-red-500"
+              ></span>
+            </button>
+            {!user ? (
+              <div className="cursor-pointer">
+                <SignUpButton />
+              </div>
+            ) : (
+              <UserButton />
+            )}
+          </div>
         </div>
 
         <div
