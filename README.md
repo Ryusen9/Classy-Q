@@ -53,21 +53,6 @@
 
 ---
 
-**Design Tokens (example)**
-
-```css
-/* Primary brand tokens - use in design system */
-:root {
-  --cq-black: #0b0b0d;
-  --cq-ink: #121214;
-  --cq-muted: #9aa0a6;
-  --cq-accent: #e3b873; /* warm gold accent */
-  --cq-surface: #ffffff;
-}
-```
-
----
-
 **Local Development**
 
 1. Clone the repo
