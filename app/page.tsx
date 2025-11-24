@@ -1,6 +1,10 @@
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="flex flex-col">
+      <div className="min-h-screen"></div>
+      <div className="min-h-screen"></div>
+      <div className="min-h-screen"></div>
+    </div>
   )
 }
 export default Home

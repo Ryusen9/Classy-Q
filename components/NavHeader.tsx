@@ -15,10 +15,10 @@ const NavHeader = () => {
       }`}
       onClick={handleHideFeature}
     >
-      <p>
+      <p className="font-work-sans">
         <Link href={"/sign-up"}>
-          <span className="font-semibold underline">Sign Up</span>
-        </Link>
+          <span className="font-medium underline">Sign Up</span>
+        </Link>{" "}
         and enjoy 10% off your first purchase!
       </p>
       <div className="absolute right-10 cursor-pointer">
