@@ -1,111 +1,114 @@
-# Classy Q
+# Classy Q — Timeless Minimal Watches
 
-Classy Q is an online-first Bangladeshi watch brand crafting minimalist, modern timepieces with a refined aesthetic. We're a young, ambitious company making a grand entrance into the watch world — combining thoughtful design, premium finishing, and contemporary web experiences to showcase our collection.
+![Classy Q](public/brand/classyq-hero.png)
 
----
-
-**What this repo is**: the official website and storefront for Classy Q, built to present our brand, product catalog, and story using modern web technologies and animation-first design.
-
-**Location**: Dhaka, Bangladesh — operating online with global ambition.
+> Minimal. Modern. Meticulous.
 
 ---
 
-**Design Philosophy**
+✨ Classy Q is an online-first watch brand from Bangladesh focused on clean silhouettes, premium finishes, and an animation-first web experience. This repository powers the official website and storefront — a living showroom for our collections as we prepare to step onto the global stage.
 
-- **Minimal & Modern**: Clean layouts, generous white space, and refined typography.
-- **Deliberate Motion**: Subtle, purposeful animations that elevate product storytelling.
-- **Quality First**: Product photography and copy that communicate premium build and detail.
-
-**Brand Promise**
-
-- Timeless silhouette, accessible luxury.
-- Reliable movements, durable finishes.
-- Thoughtful customer experience from browsing to delivery.
+**Location:** Dhaka, Bangladesh (online-based)
 
 ---
 
-**Website Goals**
+**Quick Links**
 
-- Showcase current and upcoming collections with high-fidelity visuals.
-- Provide a fast, accessible, and mobile-first shopping experience.
-- Use modern frontend tooling to enable rich interactions and smooth animations.
-
-**Key Features (current & planned)**
-
-- Clean homepage with hero, featured collections, and storytelling sections.
-- Product pages with high-resolution imagery, zoom, and spec tables.
-- Lightweight animations and transitions for a premium feel.
-- Responsive layout and strong accessibility foundations.
-- Future: CMS-driven collections, internationalization (Bangla/English), client accounts, and progressive web app (PWA) capabilities.
+- Website: (live preview link or deploy URL)
+- Design Tokens: `./design/tokens` (if available)
+- Components: `./components`
 
 ---
 
-**Tech & Architecture (examples / current stack)**
+**Visual Outline**
 
-- Frontend: Next.js (app router), React, TypeScript.
-- Styling: CSS Modules / Tailwind / PostCSS (project uses modern CSS tooling).
-- Animations: CSS transitions, Web Animations API, or animation libraries where appropriate.
-- Build & Deploy: Vercel / Netlify / other modern hosting for fast global delivery.
-- Analytics: Privacy-conscious analytics and performance monitoring.
+- Brand mark & hero — immersive product photography.
+- Editorial sections — story-led product narratives.
+- Product grid — filtered, responsive, fast-loading.
+- Lightweight motion — polish without distraction.
 
 ---
 
-**Contributing & Workflow**
+**Why Classy Q — Brand Statement**
 
-- This repository contains the website source. Follow these general steps:
+> We design watches that wear quietly, age gracefully, and pair with modern life. Our web presence matches that philosophy: restrained visual language, smooth motion, and an emphasis on craftsmanship.
 
-  1.  Fork or branch from `main`.
-  2.  Create a focused branch for your change (feature/fix/docs).
-  3.  Open a pull request with a clear title and description.
+---
 
-- Coding standards: keep changes minimal and consistent with existing style. Use TypeScript types and prefer small, testable components.
+**Highlights — What Makes the Site Modern & Cool**
+
+- Animation-first transitions: micro-interactions, parallax accents, and staged content reveals.
+- Minimal layouts with strong typography and whitespace.
+- Performance-first: image optimization, code-splitting, and accessible markup.
+- Future-ready: PWA, CMS-powered collections, i18n (Bangla/English).
+
+---
+
+**Tech Stack (current / recommended)**
+
+- Next.js (app router) + React + TypeScript
+- Styling: Tailwind CSS or modern CSS Modules + PostCSS
+- Animations: Framer Motion / Web Animations API / CSS transitions
+- Deployment: Vercel / Netlify for atomic deploys and global CDN
+
+---
+
+**Design Tokens (example)**
+
+```css
+/* Primary brand tokens - use in design system */
+:root {
+  --cq-black: #0b0b0d;
+  --cq-ink: #121214;
+  --cq-muted: #9aa0a6;
+  --cq-accent: #e3b873; /* warm gold accent */
+  --cq-surface: #ffffff;
+}
+```
+
+---
 
 **Local Development**
 
-1. Clone the repo and install dependencies.
-2. Run the dev server (example):
+1. Clone the repo
+2. Install dependencies
 
 ```powershell
 npm install
 npm run dev
 ```
 
-Adjust commands to your preferred package manager.
+Open `http://localhost:3000` and start iterating. Replace `npm` with `pnpm` or `yarn` if preferred.
 
 ---
 
-**Brand & Assets**
+**Contributing**
 
-- Use approved logos, typefaces, and color system found in `public/` and `components/`.
-- Keep product imagery high resolution; optimize for web delivery with responsive srcsets.
-
-**SEO & Content**
-
-- Use descriptive product titles and meta descriptions.
-- Add structured data (JSON-LD) for products and organization to improve search visibility.
+- Branch from `main` and open PRs for features and fixes.
+- Keep changes focused; add stories/tests for new components when applicable.
+- Run formatting and linting before submitting: `npm run lint && npm run format` (if scripts exist).
 
 ---
 
-**Contact & Business Info**
+**Roadmap (stylish outline)**
+
+- Phase 1 — Core catalog, product pages, and hero launch.
+- Phase 2 — Accounts, orders, and CMS for editorial.
+- Phase 3 — International shipping, Bangla localization, PWA shell.
+
+---
+
+**Assets & Brand**
+
+- Place brand logos, pattern assets, and product hero images in `public/brand`.
+- Keep master images in `assets/masters` and export optimized versions for web.
+
+---
+
+**Contact**
 
 - Brand: Classy Q
-- Location: Bangladesh (online-based)
-- For press, wholesale, or partnership inquiries: contact@classyq.example (replace with official address)
+- Email: `contact@classyq.example` (replace with official address)
+- Based in Dhaka, Bangladesh
 
 ---
-
-**Roadmap (high level)**
-
-- Q1: Launch core catalog and storefront.
-- Q2: Add customer accounts and order tracking.
-- Q3: Expand shipping regions and introduce localized content.
-
----
-
-If you'd like, I can:
-
-- add badges (build, license, deploy preview),
-- generate `README` images or hero mockups for the repo, or
-- localize this README into Bangla.
-
-Thank you for trusting Classy Q — let me know which next step you'd like me to take.
