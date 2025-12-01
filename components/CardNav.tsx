@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Search, ShoppingCartIcon } from "lucide-react";
 import { SignUpButton, UserButton, useUser } from "@clerk/nextjs";
+import UserProfileBtn from "./ui/UserProfileBtn";
 
 type CardNavLink = {
   label: string;
@@ -209,9 +210,6 @@ const CardNav: React.FC<CardNavProps> = ({
 
           {/* other buttons and stuff */}
           <div className="flex gap-2 items-center justify-center">
-            <button>
-              <Search />
-            </button>
             <button className="relative">
               <ShoppingCartIcon />
               <span
@@ -220,11 +218,11 @@ const CardNav: React.FC<CardNavProps> = ({
               ></span>
             </button>
             {!user ? (
-              <div className="cursor-pointer">
+              <div className="cursor-pointer bg-black text-white py-1 px-2 uppercase rounded-md">
                 <SignUpButton />
               </div>
             ) : (
-              <UserButton />
+              <UserProfileBtn />
             )}
           </div>
         </div>

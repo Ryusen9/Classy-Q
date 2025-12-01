@@ -28,7 +28,7 @@ const ServiceHome = () => {
             opacity: 1,
             scale: 1,
             duration: 1,
-            delay: index * 0.2,
+            delay: index === 1 || index === 3 ? 0.3 : 0,
             ease: "elastic.out(1, 0.5)",
           }
         );
@@ -36,7 +36,7 @@ const ServiceHome = () => {
     });
   });
   return (
-    <section className="my-8">
+    <section className="my-8 font-work-sans">
       <div className="grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto">
         {/* Content 1 */}
         <div className="p-6 flex flex-col justify-between items-start border-l-4 border-black">
@@ -59,8 +59,8 @@ const ServiceHome = () => {
           {/* card 1 */}
           <div ref={card1Ref}>
             <div className="flex items-center justify-start gap-2">
-              <div className="p-3 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
-                <TbTruckDelivery size={40} />
+              <div className="p-2 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
+                <TbTruckDelivery size={30} />
               </div>
               <p className="text-2xl px-1">Fast Delivery</p>
             </div>
@@ -72,8 +72,8 @@ const ServiceHome = () => {
           {/* card 2 */}
           <div ref={card2Ref}>
             <div className="flex items-center justify-start gap-2">
-              <div className="p-3 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
-                <MdHighQuality size={40} />
+              <div className="p-2 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
+                <MdHighQuality size={30} />
               </div>
               <p className="text-2xl">Premium Quality</p>
             </div>
@@ -88,8 +88,8 @@ const ServiceHome = () => {
           {/* card 1 */}
           <div ref={card3Ref}>
             <div className="flex items-center justify-start gap-2">
-              <div className="p-3 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
-                <GiAutoRepair size={40} />
+              <div className="p-2 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
+                <GiAutoRepair size={30} />
               </div>
               <p className="text-2xl">Expert Repairs</p>
             </div>
@@ -101,8 +101,8 @@ const ServiceHome = () => {
           {/* card 2 */}
           <div ref={card4Ref}>
             <div className="flex items-center justify-start gap-2">
-              <div className="p-3 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
-                <Contact size={40} />
+              <div className="p-2 bg-black text-white rounded-xl flex gap-2 items-center justify-start">
+                <Contact size={30} />
               </div>
               <p className="text-2xl">Customer Support</p>
             </div>
