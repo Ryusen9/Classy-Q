@@ -55,7 +55,7 @@ const ServiceHome = () => {
           </div>
         </div>
         {/* Content 2 */}
-        <div className="grid grid-cols-1 grid-rows-2 px-8">
+        <div className="grid grid-cols-1 grid-rows-2 px-8 gap-3 md:gap-1">
           {/* card 1 */}
           <div ref={card1Ref}>
             <div className="flex items-center justify-start gap-2">

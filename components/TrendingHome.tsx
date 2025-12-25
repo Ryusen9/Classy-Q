@@ -111,22 +111,22 @@ const TrendingHome = () => {
             watch.trending && (
               <div
                 key={watch.id}
-                className="p-2 rounded-2xl flex flex-col justify-start items-start gap-4 hover:shadow-lg transition-shadow duration-300"
+                className="p-2 w-[90%] mx-auto rounded-2xl flex flex-col justify-start items-start gap-4 hover:shadow-lg transition-shadow duration-300"
               >
-                <div className="flex items-center justify-center relative">
+                <div className="flex items-center justify-center relative w-full">
                   {/* Stock badge overlay */}
                   {watch.availability === "In Stock" ? (
-                    <span className="absolute z-10 top-2 left-2 backdrop-blur-lg bg-black/40 text-white text-xs px-2 py-1 rounded-full flex items-center justify-center gap-2">
+                    <span className="absolute z-30 top-2 left-2 backdrop-blur-lg bg-black/40 text-white text-xs px-2 py-1 rounded-full flex items-center justify-center gap-2">
                       <span className="p-1 rounded-full bg-green-400 animate-pulse"></span>
                       In Stock
                     </span>
                   ) : (
-                    <span className="absolute z-10 top-2 left-2 backdrop-blur-lg bg-black/40 text-white text-xs px-2 py-1 rounded-full flex items-center justify-center gap-2">
+                    <span className="absolute z-30 top-2 left-2 backdrop-blur-lg bg-black/40 text-white text-xs px-2 py-1 rounded-full flex items-center justify-center gap-2">
                       <span className="p-1 rounded-full bg-red-500 animate-pulse"></span>
                       Out of Stock
                     </span>
                   )}
-                  <button className="absolute z-10 bottom-2 right-2 p-2 bg-white/90 rounded-full hover:text-red-500 group transition-colors duration-300">
+                  <button className="absolute z-30 bottom-2 right-2 p-2 bg-white/90 rounded-full hover:text-red-500 group transition-colors duration-300">
                     <Heart className="transition-transform duration-200 group-hover:scale-110" />
                   </button>
                   <Lens
