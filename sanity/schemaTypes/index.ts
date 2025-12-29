@@ -1,5 +1,7 @@
-import { type SchemaTypeDefinition } from 'sanity'
+import { type SchemaTypeDefinition } from "sanity";
+import { categoryType } from "./categoryType";
+import { newWatch } from "./watchType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [],
-}
+  types: [categoryType, newWatch],
+};
