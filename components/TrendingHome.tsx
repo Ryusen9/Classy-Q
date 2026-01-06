@@ -244,9 +244,9 @@ const TrendingHome = () => {
                 return (
                   <div
                     key={watch.id}
-                    className="group relative bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50"
+                    className="group relative bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50 "
                   >
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col h-full items-center justify-between">
                       <div className="relative w-full aspect-square mb-6 rounded-2xl overflow-hidden bg-linear-to-br from-gray-100 to-gray-50">
                         {/* Stock badge overlay */}
                         <span
@@ -284,7 +284,7 @@ const TrendingHome = () => {
                         </Lens>
                       </div>
 
-                      <div className="space-y-3">
+                      <div className="space-y-3 flex flex-col w-full h-80 justify-between">
                         {/* Rating */}
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, i) => (
