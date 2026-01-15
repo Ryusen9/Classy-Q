@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { BiCollection } from "react-icons/bi";
+import Link from "next/link";
 
 const Hero = () => {
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -66,7 +67,7 @@ const Hero = () => {
         <div className="space-y-6 text-center md:text-left">
           <div
             data-animate
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-emerald-200"
+            className="inline-flex mt-10 lg:mt-0 items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-emerald-200"
           >
             Signature Edition
             <span className="h-1 w-1 rounded-full bg-emerald-200" aria-hidden />
@@ -91,17 +92,19 @@ const Hero = () => {
 
           <div
             data-animate
-            className="flex flex-col sm:flex-row items-center md:items-start gap-4 pt-2"
+            className="flex flex-col sm:flex-row items-center justify-center md:items-start gap-4 pt-2"
           >
-            <button className="bg-gradient-to-r from-emerald-400 to-cyan-300 hover:from-emerald-300 hover:to-cyan-200 text-black font-semibold px-7 py-3.5 rounded-xl flex items-center gap-2 shadow-xl shadow-emerald-400/30 transition-transform duration-200 hover:-translate-y-0.5">
-              View Collection <BiCollection />
-            </button>
+            <Link href={"/category"}>
+              <button className="bg-gradient-to-r from-emerald-400 to-cyan-300 hover:from-emerald-300 hover:to-cyan-200 text-black font-semibold px-7 py-3.5 rounded-xl flex items-center gap-2 shadow-xl shadow-emerald-400/30 transition-transform duration-200 hover:-translate-y-0.5">
+                View Collection <BiCollection />
+              </button>
+            </Link>
             <button className="border border-white/25 text-white px-7 py-3.5 rounded-xl hover:border-white hover:bg-white/10 transition-all duration-200">
               Explore Lookbook
             </button>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4" data-animate>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4" data-animate>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left">
               <div className="text-3xl font-bold text-white">180+</div>
               <div className="text-sm text-gray-300">Curated SKUs</div>
@@ -136,13 +139,15 @@ const Hero = () => {
               aria-hidden
             />
           </div>
-          <div className="relative mt-5 flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white">
+          <div className="relative mt-5 flex flex-col md:flex-row items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white">
             <div>
-              <div className="text-sm uppercase tracking-[0.22em] text-emerald-200">
+              <div className="text-sm text-center md:text-left uppercase tracking-[0.22em] text-emerald-200">
                 New Drop
               </div>
-              <div className="text-lg font-semibold">Carbon Lunar GMT</div>
-              <div className="text-sm text-gray-300">
+              <div className="text-lg text-center md:text-left font-semibold">
+                Carbon Lunar GMT
+              </div>
+              <div className="text-sm text-center md:text-left text-gray-300">
                 Forged carbon bezel, sapphire crystal
               </div>
             </div>
